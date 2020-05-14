@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="737.0" style="-fx-background-color: #e0b94b;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLDocumentController">
+   <children>
+      <Pane layoutX="19.0" layoutY="42.0" prefHeight="391.0" prefWidth="378.0" style="-fx-background-color: silver;">
+         <children>
+            <TextField fx:id="txt_num" layoutX="132.0" layoutY="60.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="41.0" layoutY="60.0" prefHeight="25.0" prefWidth="91.0" text="Numéro">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="103.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professeur">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="btn_ok" layoutX="668.0" layoutY="130.0" mnemonicParsing="false" onAction="#handle_add" prefHeight="27.0" prefWidth="44.0" text="OK">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_create" layoutX="620.0" layoutY="481.0" mnemonicParsing="false" onAction="#handle_creation" prefHeight="27.0" prefWidth="79.0" text="Créer">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cbo_annee" layoutX="548.0" layoutY="65.0" prefHeight="25.0" prefWidth="164.0" />
+      <ComboBox fx:id="cbo_classe" layoutX="548.0" layoutY="131.0" prefHeight="25.0" prefWidth="101.0" />
+      <Label layoutX="462.0" layoutY="64.0" text="Année">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="459.0" layoutY="130.0" prefHeight="27.0" prefWidth="79.0" text="Classe">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="459.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classes Enseignées">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <ListView fx:id="tv_list" layoutX="458.0" layoutY="259.0" prefHeight="200.0" prefWidth="241.0" style="-fx-background-color: silver;" />
+   </children>
+</AnchorPane>

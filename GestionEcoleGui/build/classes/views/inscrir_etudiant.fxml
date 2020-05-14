@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="737.0" style="-fx-background-color: #e0b94b;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLDocumentController">
+   <children>
+      <Pane layoutX="7.0" layoutY="42.0" prefHeight="151.0" prefWidth="370.0" style="-fx-background-color: silver;">
+         <children>
+            <TextField fx:id="txt_num" layoutX="132.0" layoutY="60.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="41.0" layoutY="60.0" prefHeight="25.0" prefWidth="91.0" text="Numéro">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="103.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info Etudiant(e)">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="399.0" layoutY="42.0" prefHeight="151.0" prefWidth="312.0" style="-fx-background-color: silver;">
+         <children>
+            <Text layoutX="90.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Details">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Label layoutX="14.0" layoutY="68.0" text="Classe" textFill="#1b1a16">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="107.0" prefHeight="27.0" prefWidth="133.0" text="Année Scolaire">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbo_classe" editable="true" layoutX="94.0" layoutY="66.0" prefWidth="150.0" promptText="MAE" />
+            <ComboBox fx:id="cbo_annee" editable="true" layoutX="140.0" layoutY="108.0" prefWidth="150.0" promptText="2016-2017" />
+         </children>
+      </Pane>
+      <Button fx:id="btn_inscription" layoutX="610.0" layoutY="224.0" mnemonicParsing="false" onAction="#handle_inscription" prefHeight="27.0" prefWidth="79.0" text="Inscrire">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_ok" layoutX="414.0" layoutY="308.0" mnemonicParsing="false" onAction="#handle_add" prefHeight="27.0" prefWidth="79.0" text="Ok">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="36.0" layoutY="278.0" prefHeight="25.0" prefWidth="91.0" text="Année">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="278.0" prefHeight="25.0" prefWidth="91.0" text="Classe">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tv_inscriptions" layoutX="7.0" layoutY="386.0" prefHeight="235.0" prefWidth="724.0">
+        <columns>
+          <TableColumn fx:id="tv_nom" prefWidth="166.0" style="-fx-background-color: silver;" text="Nom" />
+          <TableColumn fx:id="tv_prenom" prefWidth="184.0" style="-fx-background-color: silver;" text="Prénom" />
+            <TableColumn fx:id="tv_classe" prefWidth="190.0" style="-fx-background-color: silver;" text="Classe" />
+            <TableColumn fx:id="tv_annee" prefWidth="183.0" style="-fx-background-color: silver;" text="Année Scolaire" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cbo_annee_filtre" layoutX="2.0" layoutY="306.0" onAction="#handle_filtre_annee" prefWidth="150.0" />
+      <ComboBox fx:id="cbo_classe_filtre" layoutX="234.0" layoutY="309.0" onAction="#handle_filtre_classe" prefWidth="150.0" />
+   </children>
+</AnchorPane>
